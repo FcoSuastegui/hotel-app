@@ -8,58 +8,44 @@ class CuponScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        elevation: 0.0,
         backgroundColor: Colors.white,
         centerTitle: false,
-        title: Text("Mis cupones"),
+        elevation: 0.0,
+        title: Text(
+          'Mis cupones',
+          style: TextStyle(
+            color: Colores.primary,
+            fontWeight: FontWeight.w400,
+            fontSize: 18.0,
+          ),
+        ),
       ),
       body: DefaultTabController(
         length: 2,
         child: Column(
           children: <Widget>[
-            Container(
-              child: Material(
-                child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  padding: EdgeInsets.all(0.0),
-                  margin: EdgeInsets.only(
-                    left: 20.0,
-                    right: 20.0,
-                    top: 10.0,
-                    bottom: 10.0,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colores.back,
-                    boxShadow: [
-                      BoxShadow(
-                        blurRadius: 3.0,
-                        color: Colors.black.withOpacity(.2),
-                        //offset: Offset(6.0, 7.0),
-                      ),
-                    ],
-                    borderRadius: BorderRadius.all(Radius.circular(100)),
-                  ),
-                  child: TabBar(
-                    labelStyle: TextStyle(
-                      fontFamily: 'Oswald',
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14,
-                    ),
-                    tabs: [
-                      Tab(text: "Disponibles"),
-                      Tab(text: "Usados"),
-                    ],
-                    indicatorColor: Colors.transparent,
-                    unselectedLabelColor: Colors.black45,
-                    unselectedLabelStyle: TextStyle(
-                        fontFamily: 'Oswald',
-                        fontWeight: FontWeight.w300,
-                        fontSize: 14),
-                    labelColor: Colores.primary,
-                  ),
-                ),
+            TabBar(
+              labelStyle: TextStyle(
+                fontFamily: 'Oswald',
+                fontWeight: FontWeight.w400,
+                fontSize: 14,
               ),
+              tabs: [
+                Tab(text: "Disponibles"),
+                Tab(text: "Usados"),
+              ],
+              indicatorColor: Colores.primary,
+              unselectedLabelColor: Colors.black87,
+              unselectedLabelStyle: TextStyle(
+                fontWeight: FontWeight.w300,
+                fontSize: 16.0,
+              ),
+              labelColor: Colores.primary,
+            ),
+            SizedBox(
+              height: 10.0,
             ),
             Expanded(
               child: TabBarView(

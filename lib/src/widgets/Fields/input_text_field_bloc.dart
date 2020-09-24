@@ -1,19 +1,22 @@
-import 'package:clubimperial/src/helpers/colores.dart';
+import 'package:clubimperial/src/Helpers/colores.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_form_bloc/flutter_form_bloc.dart';
 
-class TextInputFieldBloc extends StatelessWidget {
-  final textFieldBloc;
-  final String labelText;
+class InputTextFieldBloc extends StatelessWidget {
+  final TextFieldBloc<Object> textFieldBloc;
+  final String labelText, hintText, counterText;
   final TextInputType keyboardType;
   final SuffixButton suffixButton;
+  final Widget suffix;
   final TextInputAction textInputAction;
   final List<TextInputFormatter> inputFormatters;
   final Function onSubmitted;
   final TextStyle labelStyle, style;
+  final int maxLength;
+  final bool maxLengthEnforced;
 
-  TextInputFieldBloc({
+  InputTextFieldBloc({
     Key key,
     @required this.textFieldBloc,
     this.labelText,
@@ -24,6 +27,11 @@ class TextInputFieldBloc extends StatelessWidget {
     this.suffixButton,
     this.labelStyle,
     this.style,
+    this.maxLength,
+    this.maxLengthEnforced = false,
+    this.hintText,
+    this.suffix,
+    this.counterText,
   }) : super(key: key);
 
   @override
@@ -31,11 +39,15 @@ class TextInputFieldBloc extends StatelessWidget {
     return TextFieldBlocBuilder(
       textInputAction: textInputAction,
       textFieldBloc: textFieldBloc,
-      onSubmitted: onSubmitted ?? (_) =>  FocusScope.of(context).nextFocus(),
+      onSubmitted: onSubmitted ?? (_) => FocusScope.of(context).nextFocus(),
       keyboardType: keyboardType,
       suffixButton: suffixButton,
+      maxLength: maxLength,
+      maxLengthEnforced: maxLengthEnforced,
       inputFormatters: inputFormatters,
       decoration: InputDecoration(
+        counterText: counterText,
+        suffix: suffix,
         enabledBorder: UnderlineInputBorder(
           borderSide: BorderSide(
             color: Colores.borderColor,
@@ -48,6 +60,7 @@ class TextInputFieldBloc extends StatelessWidget {
         ),
         labelText: labelText,
         labelStyle: labelStyle,
+        hintText: hintText,
       ),
       style: style,
     );

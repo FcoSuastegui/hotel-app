@@ -1,7 +1,9 @@
+import 'package:clubimperial/src/Routes/routes.dart';
 import 'package:clubimperial/src/controllers/home_controller.dart';
+import 'package:clubimperial/src/controllers/servicio_controller.dart';
 import 'package:clubimperial/src/helpers/colores.dart';
 import 'package:clubimperial/src/widgets/Cards/ServiceCard.dart';
-import 'package:clubimperial/src/widgets/Cards/VisitedCard.dart';
+import 'package:clubimperial/src/widgets/Cards/place_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,6 +13,7 @@ class HomeScreen extends StatelessWidget {
     return GetBuilder<HomeController>(
       init: HomeController(),
       builder: (_) => Scaffold(
+        backgroundColor: Colors.white,
         body: SingleChildScrollView(
           child: Container(
             child: Column(
@@ -51,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                                   margin: EdgeInsets.only(
                                     left: 20.0,
                                     right: 20.0,
-                                    top: 110.0,
+                                    top: 60.0,
                                   ),
                                   child: Column(
                                     crossAxisAlignment:
@@ -214,8 +217,17 @@ class HomeScreen extends StatelessWidget {
                                   children: List.generate(
                                     _.visitados.length,
                                     (index) {
-                                      return VisitedCard(
-                                        visited: _.visitados[index],
+                                      return GestureDetector(
+                                        onTap: () {
+                                          Get.put(ServicioController());
+                                          ServicioController controller = Get.find<ServicioController>();
+                                          controller.seleccinarPlace(_.visitados[index]);
+                                          Routes.inst.getRoute(_.visitados[index].page);
+                                        },
+                                        child: PlaceCard(
+                                          visited: _.visitados[index],
+                                          
+                                        ),
                                       );
                                     },
                                   ),

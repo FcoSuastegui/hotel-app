@@ -60,7 +60,8 @@ class ConfiguracionScreen extends StatelessWidget {
                                       Container(
                                         margin: EdgeInsets.only(top: 3),
                                         child: GestureDetector(
-                                          onTap: () =>  Routes.inst.getRoute('perfil'),
+                                          onTap: () =>
+                                              Routes.inst.getView('perfil'),
                                           child: Icon(
                                             Icons.chevron_right,
                                             color: Colors.black26,
@@ -102,7 +103,7 @@ class ConfiguracionScreen extends StatelessWidget {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () => Routes.inst.getRoute('contrasena'),
+                  onTap: () => Routes.inst.getView('contrasena'),
                   child: Container(
                     margin: EdgeInsets.only(top: 15.0, left: 25, right: 25),
                     width: MediaQuery.of(context).size.width,

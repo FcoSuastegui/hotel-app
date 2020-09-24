@@ -1,9 +1,9 @@
-import 'package:clubimperial/src/models/hotels.dart';
+import 'package:clubimperial/src/Models/place_model.dart';
+import 'package:clubimperial/src/models/hotels_model.dart';
 import 'package:clubimperial/src/helpers/get_storages.dart';
 import 'package:clubimperial/src/helpers/network.dart';
 import 'package:clubimperial/src/models/response_model.dart';
 import 'package:clubimperial/src/models/service_model.dart';
-import 'package:clubimperial/src/models/visitado_model.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
@@ -61,8 +61,8 @@ class HomeController extends GetxController {
   }
 
   // Visitados
-  RxList<VisitadoModel> _visitados = List<VisitadoModel>().obs;
-  RxList<VisitadoModel> get visitados => _visitados;
+  RxList<PlaceModel> _visitados = List<PlaceModel>().obs;
+  RxList<PlaceModel> get visitados => _visitados;
 
   RxBool _loadingVisitados = false.obs;
   RxBool get loadingVisitados => _loadingVisitados;
@@ -77,7 +77,7 @@ class HomeController extends GetxController {
       ResponseModel body = ResponseModel.fromJson(response.data);
       _visitados.clear();
       body.data.forEach((item) {
-        _visitados.add(VisitadoModel.fromJson(item));
+        _visitados.add(PlaceModel.fromJson(item));
       });
     }
     _loadingVisitados.value = false;

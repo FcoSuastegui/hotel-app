@@ -2,7 +2,7 @@ import 'package:clubimperial/src/blocs/contrasena_bloc.dart';
 import 'package:clubimperial/src/widgets/Alerts/custom_alert.dart';
 import 'package:clubimperial/src/widgets/AppBar/app_bar_custom.dart';
 import 'package:clubimperial/src/widgets/Buttons/button_submit.dart';
-import 'package:clubimperial/src/widgets/Fields/text_input_field_bloc.dart';
+import 'package:clubimperial/src/widgets/Fields/input_text_field_bloc.dart';
 import 'package:clubimperial/src/widgets/Loading/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_bloc/flutter_form_bloc.dart';
@@ -69,7 +69,7 @@ class ContrasenaScren extends StatelessWidget {
                             ),
                           ),
                         ),
-                        TextInputFieldBloc(
+                        InputTextFieldBloc(
                           textFieldBloc: password.password,
                           labelText: "Nueva contraseña *",
                           suffixButton: SuffixButton.obscureText,
@@ -80,7 +80,7 @@ class ContrasenaScren extends StatelessWidget {
                             fontWeight: FontWeight.w300,
                           ),
                         ),
-                        TextInputFieldBloc(
+                        InputTextFieldBloc(
                           textFieldBloc: password.confirmPassword,
                           labelText: "Repite tu contraseña *",
                           suffixButton: SuffixButton.obscureText,

@@ -1,7 +1,7 @@
 import 'package:clubimperial/src/blocs/login_bloc.dart';
 import 'package:clubimperial/src/widgets/Alerts/custom_alert.dart';
 import 'package:clubimperial/src/widgets/Buttons/button_submit.dart';
-import 'package:clubimperial/src/widgets/Fields/text_input_field_bloc.dart';
+import 'package:clubimperial/src/widgets/Fields/input_text_field_bloc.dart';
 import 'package:clubimperial/src/widgets/Loading/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_bloc/flutter_form_bloc.dart';
@@ -76,7 +76,7 @@ class LoginPage extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                TextInputFieldBloc(
+                                InputTextFieldBloc(
                                   textFieldBloc: login.email,
                                   labelText: "Correo electrónico *",
                                   labelStyle: TextStyle(
@@ -86,7 +86,7 @@ class LoginPage extends StatelessWidget {
                                     fontWeight: FontWeight.w300,
                                   ),
                                 ),
-                                TextInputFieldBloc(
+                                InputTextFieldBloc(
                                   textFieldBloc: login.password,
                                   suffixButton: SuffixButton.obscureText,
                                   labelText: "Contraseña *",

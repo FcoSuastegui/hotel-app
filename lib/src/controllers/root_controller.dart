@@ -24,6 +24,7 @@ class RootController extends GetxController {
 
   ThemeData _theme = ThemeData(
     textTheme: GoogleFonts.quicksandTextTheme(),
+    canvasColor: Colors.white,
     primaryColor: Colores.primary,
     backgroundColor: Colores.secondary,
   );

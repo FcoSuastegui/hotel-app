@@ -12,6 +12,7 @@ class NotificacionScreen extends StatelessWidget {
     return GetBuilder<NotificacionController>(
       init: NotificacionController(),
       builder: (_) => Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           elevation: 0.0,
           backgroundColor: Colors.white,

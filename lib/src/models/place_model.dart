@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-VisitadoModel visitadoModelFromJson(String str) => VisitadoModel.fromJson(json.decode(str));
+PlaceModel placeModelFromJson(String str) => PlaceModel.fromJson(json.decode(str));
 
-String visitadoModelToJson(VisitadoModel data) => json.encode(data.toJson());
+String placeModelToJson(PlaceModel data) => json.encode(data.toJson());
 
-class VisitadoModel {
-  VisitadoModel({
+class PlaceModel {
+  PlaceModel({
       this.image,
       this.name,
       this.place,
@@ -23,7 +23,7 @@ class VisitadoModel {
   int price;
   String page;
 
-  factory VisitadoModel.fromJson(Map<String, dynamic> json) => VisitadoModel(
+  factory PlaceModel.fromJson(Map<String, dynamic> json) => PlaceModel(
       image: json["image"],
       name: json["name"],
       place: json["place"],

@@ -4,18 +4,25 @@ import 'package:get/get.dart';
 class AppBarCustom extends AppBar {
   final String appBarTitle;
   final IconData leadingIcon;
+  final Colors backgroundColors;
 
-  AppBarCustom({@required this.appBarTitle, this.leadingIcon})
-      : super(
+  AppBarCustom({
+    @required this.appBarTitle,
+    this.leadingIcon,
+    this.backgroundColors,
+  }) : super(
           centerTitle: false,
           automaticallyImplyLeading: true,
           title: Text(
             appBarTitle,
             style: TextStyle(
-                color: Colors.black, fontSize: 20, fontFamily: 'Oswald'),
+              color: Colors.black,
+              fontSize: 20,
+              fontFamily: 'Oswald',
+            ),
           ),
           elevation: 0.0,
-          backgroundColor: Colors.white,
+          backgroundColor: backgroundColors ?? Colors.white,
           leading: leadingIcon != null
               ? IconButton(
                   icon: Icon(

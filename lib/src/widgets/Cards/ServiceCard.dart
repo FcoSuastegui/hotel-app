@@ -1,7 +1,8 @@
 import 'package:clubimperial/src/helpers/get_storages.dart';
 import 'package:clubimperial/src/models/service_model.dart';
-import 'package:clubimperial/src/routes/routes.dart';
+import 'package:clubimperial/src/pages/screens/services/services_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ServiceCard extends StatelessWidget {
   final ServiceModel service;
@@ -11,7 +12,10 @@ class ServiceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: GestureDetector(
-        onTap: () => Routes.inst.getRoute(service.page),
+        onTap: () => Get.to(
+          ServiceScreen(),
+          arguments: service.page,
+        ),
         child: Container(
           margin: EdgeInsets.only(left: 15, right: 5, bottom: 5, top: 5),
           decoration: BoxDecoration(
@@ -34,7 +38,8 @@ class ServiceCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage(
-                        "${GetStorages.inst.server}/${service.image}"),
+                      "${GetStorages.inst.server}/${service.image}",
+                    ),
                     fit: BoxFit.cover,
                   ),
                   borderRadius: BorderRadius.only(
