@@ -5,63 +5,18 @@ class NotificacionController extends GetxController {
   List items = [
     {
       "icono": "cake",
-      "titulo": "Felicidades",
+      "titulo": "Felicidades!!",
       "descripcion": "Mundo Imperial te desea un feliz cumpleaños",
     },
     {
       "icono": "restaurant",
       "titulo": "Princess",
-      "descripcion": "Mundo Imperial",
+      "descripcion": "Mundo Imperial diferentes estancias para disfrutar la tarde.",
     },
     {
       "icono": "spa",
       "titulo": "Princess",
-      "descripcion": "Mundo Imperial",
-    },
-    {
-      "icono": "local_bar",
-      "titulo": "Princess",
-      "descripcion": "Mundo Imperial",
-    },
-    {
-      "icono": "cake",
-      "titulo": "Felicidades",
-      "descripcion": "Mundo Imperial te desea un feliz cumpleaños",
-    },
-    {
-      "icono": "restaurant",
-      "titulo": "Princess",
-      "descripcion": "Mundo Imperial",
-    },
-    {
-      "icono": "spa",
-      "titulo": "Princess",
-      "descripcion": "Mundo Imperial",
-    },
-    {
-      "icono": "local_bar",
-      "titulo": "Princess",
-      "descripcion": "Mundo Imperial",
-    },
-    {
-      "icono": "cake",
-      "titulo": "Felicidades",
-      "descripcion": "Mundo Imperial te desea un feliz cumpleaños",
-    },
-    {
-      "icono": "restaurant",
-      "titulo": "Princess",
-      "descripcion": "Mundo Imperial",
-    },
-    {
-      "icono": "spa",
-      "titulo": "Princess",
-      "descripcion": "Mundo Imperial",
-    },
-    {
-      "icono": "local_bar",
-      "titulo": "Princess",
-      "descripcion": "Mundo Imperial",
+      "descripcion": "Mundo Imperial, descuento del 2x1 en el spa, para disfutrar con tu pareja",
     },
   ];
 

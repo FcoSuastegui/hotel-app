@@ -24,7 +24,7 @@ class GetStorages {
   String get token => _storage.read('token') ?? '';
 
   set page(String valor) => _storage.write('page', valor);
-  String get page => _storage.read('page') ?? '/home';
+  String get page => _storage.read('page') ?? '/';
 
   set sistema(int valor) => _storage.write('sistema', valor);
   int get sistema => _storage.read('sistema') ?? 0;

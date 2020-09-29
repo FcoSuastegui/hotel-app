@@ -1,4 +1,4 @@
-package com.example.clubimperial
+package com.hotel.club.imperial
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

@@ -1,3 +1,4 @@
+import 'package:clubimperial/src/Helpers/linnerContainer.dart';
 import 'package:clubimperial/src/controllers/notificacion_controller.dart';
 import 'package:clubimperial/src/helpers/colores.dart';
 import 'package:clubimperial/src/helpers/iconos.dart';
@@ -25,27 +26,33 @@ class NotificacionScreen extends StatelessWidget {
               _.notifications.length,
               (index) {
                 final notificacion = _.notifications[index];
-                return Container(
-                  color: Colors.white,
-                  margin: EdgeInsets.only(top: 10.0),
-                  child: Dismissible(
-                    key: UniqueKey(),
-                    onDismissed: (direction) => {},
-                    child: ListTile(
-                      selected: false,
-                      leading: Iconos.icono(
-                        icono: notificacion.icono,
-                        color: Colores.primary,
-                      ),
-                      title: Text("${notificacion.titulo}"),
-                      subtitle: Text("${notificacion.titulo}"),
-                      onTap: () {},
-                      trailing: Icon(
-                        Icons.keyboard_arrow_right,
-                        color: Colors.grey,
+                return Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Container(
+                      color: Colors.white,
+                      margin: EdgeInsets.only(top: 10.0),
+                      child: Dismissible(
+                        key: UniqueKey(),
+                        onDismissed: (direction) => {},
+                        child: ListTile(
+                          selected: false,
+                          leading: Iconos.icono(
+                            icono: notificacion.icono,
+                            color: Colores.primary,
+                          ),
+                          title: Text("${notificacion.titulo}"),
+                          subtitle: Text("${notificacion.descripcion}"),
+                          onTap: () {},
+                          /* trailing: Icon(
+                            Icons.keyboard_arrow_right,
+                            color: Colors.grey,
+                          ), */
+                        ),
                       ),
                     ),
-                  ),
+                    LinnerContainer(),
+                  ],
                 );
               },
             ),
