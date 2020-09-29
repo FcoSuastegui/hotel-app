@@ -1,5 +1,7 @@
 import 'package:clubimperial/src/Helpers/colores.dart';
+import 'package:clubimperial/src/Helpers/get_storages.dart';
 import 'package:clubimperial/src/Helpers/iconos.dart';
+import 'package:clubimperial/src/widgets/Qr/qr_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -87,7 +89,17 @@ class ServicioTab extends StatelessWidget {
   Widget _services(services) {
     return Container(
       child: GestureDetector(
-        onTap: () {},
+        onTap: () => Get.to(
+          QrView(
+            QrModel(
+              title: "Cupon",
+              description: "1) No es transferible\n" +
+                "2) No acumulable con otras promociones\n" +
+                "3) Sujeto a disponibilidad de ocupación",
+              data: "${GetStorages.inst.server}"
+            )
+          )
+        ),
         child: Container(
           margin: EdgeInsets.only(
             left: 20,
@@ -102,7 +114,7 @@ class ServicioTab extends StatelessWidget {
             boxShadow: [
               BoxShadow(
                 blurRadius: 3.0,
-                color: Colors.black.withOpacity(.2),
+                color: Colors.black.withOpacity(0.2),
               ),
             ],
           ),
@@ -133,9 +145,9 @@ class ServicioTab extends StatelessWidget {
                           children: <Widget>[
                             Container(
                               margin: EdgeInsets.only(
-                                top: 5,
-                                left: 0,
-                                bottom: 0,
+                                top: 5.0,
+                                left: 0.0,
+                                bottom: 0.0,
                               ),
                               child: Text(
                                 "${services['nombre']}",

@@ -2,7 +2,7 @@ import 'package:clubimperial/src/helpers/colores.dart';
 import 'package:clubimperial/src/helpers/get_storages.dart';
 import 'package:clubimperial/src/helpers/iconos.dart';
 import 'package:clubimperial/src/models/cupon_model.dart';
-import 'package:clubimperial/src/widgets/Qr/coupons.dart';
+import 'package:clubimperial/src/widgets/Qr/qr_view.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:get/get.dart';
@@ -15,7 +15,17 @@ class CouponCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: GestureDetector(
-        onTap: () => Get.to(QrCoupon("${GetStorages.inst.server}${coupon.qr}")),
+        onTap: () => Get.to(
+          QrView(
+            QrModel(
+              title: "Cupon",
+              description: "1) No es transferible\n" +
+                "2) No acumulable con otras promociones\n" +
+                "3) Sujeto a disponibilidad de ocupación",
+              data: "${GetStorages.inst.server}${coupon.qr}"
+            )
+          )
+        ),
         child: Container(
           padding: EdgeInsets.only(left: 5, top: 5),
           margin: EdgeInsets.only(left: 20, right: 20, top: 5, bottom: 5),

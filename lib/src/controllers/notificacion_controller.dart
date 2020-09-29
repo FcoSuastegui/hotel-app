@@ -7,21 +7,27 @@ class NotificacionController extends GetxController {
       "icono": "cake",
       "titulo": "Felicidades!!",
       "descripcion": "Mundo Imperial te desea un feliz cumpleaños",
+      "page" : "",
     },
     {
       "icono": "restaurant",
       "titulo": "Princess",
-      "descripcion": "Mundo Imperial diferentes estancias para disfrutar la tarde.",
+      "descripcion": "Mundo Imperial tiene diferentes estancias para disfrutar la tarde.",
+      "page" : "",
     },
     {
       "icono": "spa",
       "titulo": "Princess",
-      "descripcion": "Mundo Imperial, descuento del 2x1 en el spa, para disfutrar con tu pareja",
+      "descripcion": "Mundo Imperial tiene descuento del 2x1 en el spa, para disfutrar con tu pareja",
+      "page" : "",
     },
   ];
 
   List<NotificationModel> _notifications = new List();
   List<NotificationModel> get notifications => _notifications;
+
+  NotificationModel _notification;
+  NotificationModel get notification => _notification;
 
   @override
   void onInit() {
@@ -30,4 +36,7 @@ class NotificacionController extends GetxController {
     }
     super.onInit();
   }
+
+  void seleccionarNotificacion( NotificationModel notification) => _notification = notification;
+
 }

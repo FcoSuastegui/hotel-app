@@ -1,5 +1,5 @@
 import 'package:clubimperial/src/controllers/perfil_controller.dart';
-import 'package:clubimperial/src/helpers/colores.dart';
+//import 'package:clubimperial/src/helpers/colores.dart';
 import 'package:clubimperial/src/helpers/get_storages.dart';
 import 'package:clubimperial/src/models/perfil_model.dart';
 import 'package:clubimperial/src/widgets/AppBar/app_bar_custom.dart';
@@ -62,7 +62,7 @@ class PerfilScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    GestureDetector(
+                    /* GestureDetector(
                       onTap: () {},
                       child: Container(
                         margin: EdgeInsets.only(left: 65, top: 75),
@@ -79,7 +79,7 @@ class PerfilScreen extends StatelessWidget {
                           size: 20,
                         ),
                       ),
-                    ),
+                    ), */
                   ],
                 ),
               ],

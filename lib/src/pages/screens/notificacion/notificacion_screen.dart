@@ -2,6 +2,7 @@ import 'package:clubimperial/src/Helpers/linnerContainer.dart';
 import 'package:clubimperial/src/controllers/notificacion_controller.dart';
 import 'package:clubimperial/src/helpers/colores.dart';
 import 'package:clubimperial/src/helpers/iconos.dart';
+import 'package:clubimperial/src/pages/screens/notificacion/notificacion_contenido.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -43,15 +44,21 @@ class NotificacionScreen extends StatelessWidget {
                           ),
                           title: Text("${notificacion.titulo}"),
                           subtitle: Text("${notificacion.descripcion}"),
-                          onTap: () {},
-                          /* trailing: Icon(
+                          onTap: () {
+                            _.seleccionarNotificacion(notificacion);
+                            Get.to(NotificacionContenido());
+                          },
+                          trailing: Icon(
                             Icons.keyboard_arrow_right,
                             color: Colors.grey,
-                          ), */
+                          ),
                         ),
                       ),
                     ),
-                    LinnerContainer(),
+                    LinnerContainer(
+                      left: 10.0,
+                      right: 10.0,
+                    ),
                   ],
                 );
               },

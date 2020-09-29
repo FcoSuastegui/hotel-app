@@ -92,7 +92,7 @@ class ConfiguracionScreen extends StatelessWidget {
                               boxShadow: [
                                 BoxShadow(
                                   blurRadius: 3.0,
-                                  color: Colors.black.withOpacity(.2),
+                                  color: Colors.black.withOpacity(0.2),
                                 ),
                               ],
                             ),
