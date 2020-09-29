@@ -23,6 +23,7 @@ class LoginController extends GetxController {
           GetStorages.inst.nombre = body.data['nombre'];
           GetStorages.inst.email = body.data['email'];
           GetStorages.inst.avatar = body.data['avatar'];
+          GetStorages.inst.page = '/home';
           respuesta['status'] = body.status;
         } else {
           respuesta['message'] = body.message;

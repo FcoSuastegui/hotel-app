@@ -2,7 +2,6 @@ import 'package:clubimperial/src/Helpers/colores.dart';
 import 'package:clubimperial/src/Helpers/get_storages.dart';
 import 'package:clubimperial/src/Models/place_model.dart';
 import 'package:clubimperial/src/controllers/servicio_controller.dart';
-import 'package:clubimperial/src/pages/screens/services/actividad/reservacion_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -262,7 +261,7 @@ class ActividadTab extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            Container(
+                            /* Container(
                               margin: EdgeInsets.only(top: 20.0, left: 0.0),
                               child: Align(
                                 alignment: Alignment.centerRight,
@@ -303,7 +302,7 @@ class ActividadTab extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            Container(
+                             */Container(
                               margin: EdgeInsets.only(top: 20.0, left: 0.0),
                               child: Row(
                                 mainAxisAlignment:

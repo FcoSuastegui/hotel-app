@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  GetStorages.inst.init();
+  await GetStorages.inst.init();
   runApp(MyApp());
 }
 
