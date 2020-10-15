@@ -33,23 +33,11 @@ class BottomNavigationHomeController extends GetxController {
     _items = [
       BottomNavigationBarItem(
         icon: Icon(Icons.home, color: Colores.primary, size: 18),
-        title: Text(
-          "Inicio",
-          style: TextStyle(
-            fontFamily: 'Oswald',
-            fontSize: 15,
-          ),
-        ),
+        label: "Inicio",
       ),
       BottomNavigationBarItem(
         icon: Icon(Icons.card_giftcard, color: Colores.primary, size: 18),
-        title: Text(
-          "Cupones",
-          style: TextStyle(
-            fontFamily: 'Oswald',
-            fontSize: 15,
-          ),
-        ),
+        label:  "Cupones",
       ),
       BottomNavigationBarItem(
         icon: Badge(
@@ -63,23 +51,11 @@ class BottomNavigationHomeController extends GetxController {
             size: 18,
           ),
         ),
-        title: Text(
-          "Notificaciones",
-          style: TextStyle(
-            fontFamily: 'Oswald',
-            fontSize: 15,
-          ),
-        ),
+        label: "Notificaciones",
       ),
       BottomNavigationBarItem(
         icon: Icon(Icons.settings, color: Colores.primary, size: 18),
-        title: Text(
-          "Configuración",
-          style: TextStyle(
-            fontFamily: 'Oswald',
-            fontSize: 15,
-          ),
-        ),
+        label: "Configuración",
       ),
     ];
     super.onInit();

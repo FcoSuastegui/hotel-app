@@ -122,8 +122,11 @@ class _LinearPercentIndicatorState extends State<LinearPercentIndicator>
   void initState() {
     if (widget.animation) {
       _animationController = new AnimationController(
-          vsync: this,
-          duration: Duration(milliseconds: widget.animationDuration));
+        vsync: this,
+        duration: Duration(
+          milliseconds: widget.animationDuration,
+        ),
+      );
       _animation =
           Tween(begin: 0.0, end: widget.percent).animate(_animationController)
             ..addListener(() {
