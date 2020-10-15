@@ -1,11 +1,11 @@
 import 'package:clubimperial/src/helpers/helper.dart';
 import 'package:clubimperial/src/pages/home_page.dart';
-import 'package:clubimperial/src/pages/login_page.dart';
 import 'package:clubimperial/src/pages/screens/configuracion/contrasena/contrasena_screen.dart';
 import 'package:clubimperial/src/pages/screens/configuracion/perfil/perfil_screen.dart';
 import 'package:clubimperial/src/pages/screens/services/actividad/actividad_screen.dart';
 import 'package:clubimperial/src/pages/screens/services/hotel/hotel_screen.dart';
 import 'package:clubimperial/src/pages/screens/services/restaurante/restaurante_screen.dart';
+import 'package:clubimperial/src/views/login/login_view.dart';
 import 'package:get/get.dart';
 
 class Routes {
@@ -15,8 +15,8 @@ class Routes {
 
   final routes = [
     GetPage(
-      name: LoginPage.routeName,
-      page: () => LoginPage(),
+      name: LoginView.routeName,
+      page: () => LoginView(),
     ),
     GetPage(
       name: HomePage.routeName,
