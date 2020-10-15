@@ -1,3 +1,5 @@
+import 'package:flutter_form_bloc/flutter_form_bloc.dart';
+
 class ValidatorStringBloc {
   static final ValidatorStringBloc _validatorStringBloc =
       new ValidatorStringBloc._internal();
@@ -61,4 +63,19 @@ class ValidatorStringBloc {
       RegExp(r'^(0[1-9]|1[0-2])\/([2-9][0-9])$').hasMatch(textField)
           ? null
           : 'ValidThru incorrecto';
+
+  static Validator<String> minLength(TextFieldBloc textFieldBloc, int length) =>
+      (String textField) => (textField.length < length)
+          ? "El campo debe tener minimo $length caracteres"
+          : null;
+
+  static Validator<String> maxLength(TextFieldBloc textFieldBloc, int length) =>
+      (String textField) => (textField.length > length)
+          ? "El campo debe tener máximo $length caracteres"
+          : null;
+
+  static Validator<String> confirmPassword(TextFieldBloc password) =>
+      (String passwordConfirm) => (passwordConfirm != password.value)
+          ? "Debe ser igual a la contraseña"
+          : null;
 }

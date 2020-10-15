@@ -103,7 +103,7 @@ class ConfiguracionScreen extends StatelessWidget {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () => Routes.inst.getView('contrasena'),
+                  onTap: () => Get.toNamed('/password'),
                   child: Container(
                     margin: EdgeInsets.only(top: 15.0, left: 25, right: 25),
                     width: MediaQuery.of(context).size.width,
