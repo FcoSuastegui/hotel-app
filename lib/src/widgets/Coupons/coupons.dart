@@ -1,7 +1,7 @@
+import 'package:clubimperial/src/data/models/cupon_model.dart';
 import 'package:clubimperial/src/helpers/colores.dart';
 import 'package:clubimperial/src/helpers/get_storages.dart';
 import 'package:clubimperial/src/helpers/iconos.dart';
-import 'package:clubimperial/src/models/cupon_model.dart';
 import 'package:clubimperial/src/widgets/Qr/qr_view.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -20,11 +20,11 @@ class CouponCard extends StatelessWidget {
             QrModel(
               title: "Cupon",
               description: "1) No es transferible\n" +
-                "2) No acumulable con otras promociones\n" +
-                "3) Sujeto a disponibilidad de ocupación",
-              data: "${GetStorages.inst.server}${coupon.qr}"
-            )
-          )
+                  "2) No acumulable con otras promociones\n" +
+                  "3) Sujeto a disponibilidad de ocupación",
+              data: "${GetStorages.inst.server}${coupon.qr}",
+            ),
+          ),
         ),
         child: Container(
           padding: EdgeInsets.only(left: 5, top: 5),
@@ -63,10 +63,11 @@ class CouponCard extends StatelessWidget {
                                   children: <Widget>[
                                     Container(
                                       margin: EdgeInsets.only(
-                                          top: 5,
-                                          left: 3,
-                                          bottom: 0,
-                                          right: 15),
+                                        top: 5,
+                                        left: 3,
+                                        bottom: 0,
+                                        right: 15,
+                                      ),
                                       child: Row(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.end,
@@ -107,7 +108,8 @@ class CouponCard extends StatelessWidget {
                                                   Expanded(
                                                     child: Container(
                                                       margin: EdgeInsets.only(
-                                                          left: 3),
+                                                        left: 3,
+                                                      ),
                                                       child: Text(
                                                         "${coupon.nombre}",
                                                         textAlign:
@@ -132,7 +134,10 @@ class CouponCard extends StatelessWidget {
                                     ),
                                     Container(
                                       margin: EdgeInsets.only(
-                                          left: 0, right: 0, top: 3),
+                                        left: 0,
+                                        right: 0,
+                                        top: 3,
+                                      ),
                                       decoration: BoxDecoration(
                                         color: Colors.white,
                                         borderRadius: BorderRadius.all(
@@ -159,9 +164,10 @@ class CouponCard extends StatelessWidget {
                                               child: Text(
                                                 "${coupon.status}",
                                                 style: TextStyle(
-                                                    color: Colors.grey[400],
-                                                    fontSize: 11,
-                                                    fontFamily: 'Oswald'),
+                                                  color: Colors.grey[400],
+                                                  fontSize: 11,
+                                                  fontFamily: 'Oswald',
+                                                ),
                                                 textAlign: TextAlign.center,
                                               ),
                                             ),
