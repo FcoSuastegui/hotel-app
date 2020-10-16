@@ -50,4 +50,31 @@ class AuthService {
 
     return respuesta;
   }
+
+  Future<ResponseModel> profile(Map<String, dynamic> data) async {
+    final ResponseModel respuesta = ResponseModel(
+      status: false,
+      message: '',
+    );
+
+    try {
+      final response = await Network.instance.post(
+        route: 'perfil',
+        data: data,
+      );
+      if (response.statusCode == 200) {
+        ResponseModel body = ResponseModel.fromJson(response.data);
+        if (body.status) {
+          respuesta.status = body.status;
+          respuesta.data = body.data;
+        } else {
+          respuesta.message = body.message;
+        }
+      }
+    } on DioError catch (e) {
+      respuesta.message = e.error.toString();
+    }
+
+    return respuesta;
+  }
 }
