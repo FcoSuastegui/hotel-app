@@ -1,9 +1,9 @@
 import 'package:badges/badges.dart';
 import 'package:clubimperial/src/helpers/colores.dart';
-import 'package:clubimperial/src/pages/screens/configuracion/configuracion_screen.dart';
 import 'package:clubimperial/src/pages/screens/cupon/cupon_screen.dart';
 import 'package:clubimperial/src/pages/screens/home/home_screen.dart';
-import 'package:clubimperial/src/pages/screens/notificacion/notificacion_screen.dart';
+import 'package:clubimperial/src/views/notifications/notification_view.dart';
+import 'package:clubimperial/src/views/settings/setting_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,8 +12,8 @@ class BottomNavigationHomeController extends GetxController {
     List<Widget> _pageOptions = [
       HomeScreen(),
       CuponScreen(),
-      NotificacionScreen(),
-      ConfiguracionScreen()
+      NotificationView(),
+      SettingView()
     ];
 
     int indexAux = index + 1;
