@@ -4,29 +4,29 @@ NotificationModel notificationModelFromJson(String str) => NotificationModel.fro
 String notificationModelToJson(NotificationModel data) => json.encode(data.toJson());
 
 class NotificationModel {
-  String icono;
-  String titulo;
-  String descripcion;
+  String icon;
+  String title;
+  String description;
   String page;
 
   NotificationModel({
-      this.icono,
-      this.titulo,
-      this.descripcion,
+      this.icon,
+      this.title,
+      this.description,
       this.page,
   });
 
   factory NotificationModel.fromJson(Map<String, dynamic> json) => NotificationModel(
-      icono         : json["icono"],
-      titulo        : json["titulo"],
-      descripcion   : json["descripcion"],
+      icon         : json["icon"],
+      title        : json["title"],
+      description   : json["description"],
       page          : json["page"],
   );
 
   Map<String, dynamic> toJson() => {
-      "icono"       : icono,
-      "titulo"      : titulo,
-      "descripcion" : descripcion,
+      "icon"       : icon,
+      "title"      : title,
+      "description" : description,
       "page"        : page,
   };
 }
