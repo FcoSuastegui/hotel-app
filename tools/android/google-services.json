@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "988179372614",
+    "firebase_url": "https://tsa-mundo-imperial.firebaseio.com",
+    "project_id": "tsa-mundo-imperial",
+    "storage_bucket": "tsa-mundo-imperial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988179372614:android:aa1873c72cb8c6c09b4847",
+        "android_client_info": {
+          "package_name": "com.hotel.club.imperial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988179372614-t7dg800kberkka8k9de6g8p5rj0gimfs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hotel.club.imperial",
+            "certificate_hash": "f69bca265b5e0fb60052f070d52937ff0615fdfd"
+          }
+        },
+        {
+          "client_id": "988179372614-f4ddhrtl567blsbh7c5eqqegocihq4v5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBItXWLSCgv4O2GSmJeUmcT1kLplmHTHdc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988179372614-f4ddhrtl567blsbh7c5eqqegocihq4v5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "988179372614-tu9fq1030fpdhsk1vg334c5cjiq0tkur.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hotel.club.imperial",
+                "app_store_id": "1533353442"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

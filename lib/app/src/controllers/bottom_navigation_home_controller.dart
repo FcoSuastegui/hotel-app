@@ -2,6 +2,7 @@ import 'package:badges/badges.dart';
 import 'package:clubimperial/app/src/helpers/colores.dart';
 import 'package:clubimperial/app/src/pages/screens/home/home_screen.dart';
 import 'package:clubimperial/app/src/views/coupon/coupon_view.dart';
+import 'package:clubimperial/app/src/views/notifications/controller/notification_controller.dart';
 import 'package:clubimperial/app/src/views/notifications/notification_view.dart';
 import 'package:clubimperial/app/src/views/settings/setting_view.dart';
 import 'package:flutter/material.dart';
@@ -37,13 +38,18 @@ class BottomNavigationHomeController extends GetxController {
       ),
       BottomNavigationBarItem(
         icon: Icon(Icons.card_giftcard, color: Colores.primary, size: 18),
-        label:  "Cupones",
+        label: "Cupones",
       ),
       BottomNavigationBarItem(
         icon: Badge(
-          badgeContent: Text(
-            '3',
-            style: TextStyle(color: Colors.white),
+          badgeContent: GetBuilder<NotificationController>(
+            init: NotificationController.instance,
+            builder: (_) => Obx(
+              () => Text(
+                _.counter.value.toString(),
+                style: TextStyle(color: Colors.white, fontSize: 10.0),
+              ),
+            ),
           ),
           child: Icon(
             Icons.notifications,

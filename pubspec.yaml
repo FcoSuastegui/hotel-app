@@ -41,7 +41,11 @@ dependencies:
   # Estas librerias son las que se agregaron despues
   cached_network_image: ^2.1.0
   package_info: ^0.4.3
+  device_info: ^0.4.2+9
   pub_semver: ^1.4.4
+  store_redirect: ^1.0.2
+  firebase_core: ^0.5.0+1
+  firebase_messaging: ^7.0.3
   flutter_swiper: ^1.1.4
 
 

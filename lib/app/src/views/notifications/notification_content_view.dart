@@ -2,6 +2,7 @@ import 'package:clubimperial/app/src/helpers/colores.dart';
 import 'package:clubimperial/app/src/helpers/get_storages.dart';
 import 'package:clubimperial/app/src/helpers/iconos.dart';
 import 'package:clubimperial/app/src/views/notifications/controller/notification_controller.dart';
+import 'package:clubimperial/app/src/widgets/AppBar/app_bar_custom.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,11 +12,9 @@ class NotificationContentView extends GetView<NotificationController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        elevation: 0.0,
-        backgroundColor: Colors.white,
-        centerTitle: false,
-        title: Text("${controller.notification.title}"),
+      appBar: AppBarCustom(
+        appBarTitle: "${controller.notification.title}",
+        leadingIcon: Icons.clear,
       ),
       body: Container(
         child: Center(

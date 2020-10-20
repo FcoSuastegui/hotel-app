@@ -22,11 +22,16 @@ class AlertAskAgainDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return Platform.isIOS
         ? CupertinoAlertDialog(
-
-            title: Text(title ?? 'App Update Available'),
+            title: Text(
+              title ?? 'App Update Available',
+              textAlign: TextAlign.center,
+            ),
             content: Container(
               margin: const EdgeInsets.only(top: 6.0),
-              child: Text(subTitle ?? 'Please update the app to continue'),
+              child: Text(
+                subTitle ?? 'Please update the app to continue',
+                textAlign: TextAlign.center,
+              ),
             ),
             actions: <Widget>[
               CupertinoDialogAction(
@@ -40,13 +45,18 @@ class AlertAskAgainDialog extends StatelessWidget {
         : AlertDialog(
             title: Text(
               title ?? 'App Update Available',
-              style: TextStyle(fontSize: 24),
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 20.0),
             ),
             content: FittedBox(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(subTitle ?? 'Please update the app to continue'),
+                  Text(
+                    subTitle ?? 'Please update the app to continue',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 22.0),
+                  ),
                 ],
               ),
             ),

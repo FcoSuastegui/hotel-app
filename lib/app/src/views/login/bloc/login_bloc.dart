@@ -1,3 +1,4 @@
+import 'package:clubimperial/app/controller/firebase_controller.dart';
 import 'package:clubimperial/app/src/data/models/response_model.dart';
 import 'package:clubimperial/app/src/data/services/auth_service.dart';
 import 'package:clubimperial/app/src/helpers/get_storages.dart';
@@ -38,6 +39,7 @@ class LoginBloc extends FormBloc<String, String> {
       GetStorages.inst.email = response.data['email'];
       GetStorages.inst.avatar = response.data['avatar'];
       GetStorages.inst.page = '/home';
+      await FireBaseController.inst.init();
       emitSuccess();
     } else {
       emitFailure(failureResponse: response.message);

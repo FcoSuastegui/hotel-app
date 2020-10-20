@@ -9,7 +9,7 @@ class NotificationService {
     );
     try {
       final response = await Network.instance.post(
-        route: 'notifications',
+        route: 'listNotifications',
         data: data,
       );
       if (response.statusCode == 200) {

@@ -12,6 +12,7 @@ class HomePage extends StatelessWidget {
         () => Scaffold(
           body: _.pageOptions(_.currentIndex.value),
           bottomNavigationBar: BottomNavigationBar(
+            selectedFontSize: 10.0,
             backgroundColor: Colors.white,
             type: BottomNavigationBarType.fixed,
             currentIndex: _.currentIndex.value,
