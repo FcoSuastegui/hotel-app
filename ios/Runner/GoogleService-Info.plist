@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>988179372614-tu9fq1030fpdhsk1vg334c5cjiq0tkur.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.988179372614-tu9fq1030fpdhsk1vg334c5cjiq0tkur</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAg6HV7NfIW8svyRscE0yBCTy_l12fNAvk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>988179372614</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.hotel.club.imperial</string>
+	<key>PROJECT_ID</key>
+	<string>tsa-mundo-imperial</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tsa-mundo-imperial.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:988179372614:ios:7baa69eda41c8bf99b4847</string>
+	<key>DATABASE_URL</key>
+	<string>https://tsa-mundo-imperial.firebaseio.com</string>
+</dict>
+</plist>
